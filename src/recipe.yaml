@@ -25,7 +25,7 @@ steps:
     # registration to the MLflow Model Registry
     validation_criteria:
       - metric: root_mean_squared_error
-        threshold: 100
+        threshold: 1
   register:
     # Indicates whether or not a model that fails to meet performance thresholds should still
     # be registered to the MLflow Model Registry

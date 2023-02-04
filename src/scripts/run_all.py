@@ -3,18 +3,19 @@ from mlflow.recipes import Recipe
 from pathlib import Path
 
 os.chdir(Path(__file__).parents[1])
-r = Recipe(profile="local")
 
-r.run("ingest")
+recipe = Recipe(profile="local")
 
-r.run("split")
+recipe.run("ingest")
 
-r.run("transform")
+recipe.run("split")
 
-r.run("train")
+recipe.run("transform")
 
-r.run("evaluate")
+recipe.run("train")
 
-r.run("register")
+recipe.run("evaluate")
 
-r.inspect("train")
+recipe.run("register")
+
+recipe.inspect("train")
