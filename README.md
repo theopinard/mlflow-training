@@ -14,7 +14,7 @@ python scripts/run_all.py
 
 to start the mlflow UI: 
 ```sh
-mlflow ui
+mlflow ui \
     --backend-store-uri sqlite:///src/metadata/mlflow/mlruns.db \
     --default-artifact-root ./src/metadata/mlflow/mlartifacts \
     --host 0.0.0.0 \
