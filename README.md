@@ -3,6 +3,14 @@ The purpose of the tutorial is to give a taste of the ML development process wit
 
 ## Installation
 
+[
+    ![Open in Remote - Containers](
+        https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
+    )
+](
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/theopinard/mlflow-training
+)
+
 you will need to have python 3.10 installed a create a new environement. 
 
 you can then install the requirements 
