@@ -31,7 +31,6 @@ mlflow ui \
 
 ## ToDo
 
-* [] add notebook with training for 
-* [] add devcontainer to repository
-* [] add custom metrics to evaluation
-* [] add deployment script / doc
+- add notebook with training
+- add custom metrics to evaluation
+- add deployment script / doc

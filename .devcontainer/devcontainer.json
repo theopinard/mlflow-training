@@ -10,6 +10,24 @@
             "onAutoForward": "notify"
         }
     },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "python.testing.pytestArgs": [
+                    "."
+                ],
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true,
+                "python.formatting.provider": "black",
+                "python.linting.mypyEnabled": true,
+                "python.linting.enabled": true
+            }
+        }
+    },
 
     "forwardPorts": [
         5000

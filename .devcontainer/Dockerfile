@@ -12,7 +12,8 @@ USER $USERNAME
 # Upgrade pip
 RUN pip install --upgrade pip
 
-# Install production dependencies
+# Install production and dev dependencies
 COPY --chown=nonroot:1000 requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt && \
-    rm /tmp/requirements.txt
+COPY --chown=nonroot:1000 requirements-dev.txt /tmp/requirements-dev.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt -r /tmp/requirements-dev.txt && \
+    rm /tmp/requirements.txt /tmp/requirements-dev.txt
