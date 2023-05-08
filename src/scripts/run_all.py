@@ -1,21 +1,27 @@
 import os
 from mlflow.recipes import Recipe
 from pathlib import Path
+import sys
 
 os.chdir(Path(__file__).parents[1])
 
-recipe = Recipe(profile="local")
+if __name__ == "__main__":
+    profile = sys.argv[1]
 
-recipe.run("ingest")
+    recipe = Recipe(profile=profile)
 
-recipe.run("split")
+    recipe.run("ingest")
 
-recipe.run("transform")
+    recipe.run("split")
 
-recipe.run("train")
+    recipe.run("transform")
 
-recipe.run("evaluate")
+    recipe.run("train")
 
-recipe.run("register")
+    recipe.run("evaluate")
 
-recipe.inspect("train")
+    if profile != "databricks":
+        # We can only register locally, not on databricks community
+        recipe.run("register")
+
+    recipe.inspect("train")

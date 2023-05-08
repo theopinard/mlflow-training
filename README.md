@@ -17,16 +17,30 @@ you can then install the requirements
 
 To run the script to load train and 
 ```bash
-python scripts/run_all.py
+mlflow experiments create -n /Shared/wine-score
+python src/scripts/run_all.py local
 ```
 
 to start the mlflow UI: 
-```sh
+```bash
 mlflow ui \
     --backend-store-uri sqlite:///src/metadata/mlflow/mlruns.db \
     --default-artifact-root ./src/metadata/mlflow/mlartifacts \
     --host 0.0.0.0 \
     --port 5000
+```
+
+You can also save your MLlfow model into [databricks community edition](https://community.cloud.databricks.com).
+To do so you will need to save as env variable the following credential to make it work:
+```bash
+export MLFLOW_TRACKING_URI=databricks
+export DATABRICKS_USERNAME="..."
+export DATABRICKS_PASSWORD="..."
+```
+
+You can then run 
+```bash
+python src/scripts/run_all.py databricks
 ```
 
 ## ToDo
