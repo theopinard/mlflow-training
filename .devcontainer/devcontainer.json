@@ -13,7 +13,9 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-python.python"
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "github.copilot"
             ],
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash",
