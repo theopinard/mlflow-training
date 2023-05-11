@@ -1,5 +1,5 @@
 experiment:
-  name: "wine_score"
+  name: "wine_score_recipe"
   tracking_uri: "sqlite:///metadata/mlflow/mlruns.db"
   artifact_location: "./metadata/mlflow/mlartifacts"
 

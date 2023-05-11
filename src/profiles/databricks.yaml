@@ -1,5 +1,5 @@
 experiment:
-  name: "/Shared/wine-score"
+  name: "/Shared/wine_score_recipe"
   tracking_uri: "databricks"
 
   
