@@ -8,6 +8,10 @@
         "5000": {
             "label": "mlflow",
             "onAutoForward": "notify"
+        },
+        "8888": {
+            "label": "jupyter",
+            "onAutoForward": "notify"
         }
     },
     "customizations": {
