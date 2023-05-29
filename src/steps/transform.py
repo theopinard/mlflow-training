@@ -1,8 +1,28 @@
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler
+
 def transformer_fn():
     """
-    Returns an *unfitted* transformer that defines ``fit()`` and ``transform()`` methods.
-    The transformer's input and output signatures should be compatible with scikit-learn
-    transformers.
+    Returns a Pipeline object that transforms the features
     """
-
-    return None
+    columns = ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
+       'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
+       'pH', 'sulphates', 'alcohol', 'is_red']
+    return Pipeline(
+        [
+            (
+                "ct",
+                ColumnTransformer(
+                    [
+                        (
+                            "minmax",
+                            StandardScaler(),
+                            columns,
+                        ),
+                        
+                    ]
+                )
+            )
+        ]
+    )

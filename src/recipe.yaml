@@ -8,7 +8,7 @@ steps:
   ingest: {{INGEST_CONFIG}}
   split:
     # Train/validation/test split ratios
-    split_ratios: {{SPLIT_RATIOS|default([0.75, 0.125, 0.125])}}
+    split_ratios: [0.8, 0.1, 0.1]
     # Specifies the method to use to perform additional cleaning on split datasets
     # Note that arbitrary transformations should go into the transform step
     # post_split_filter_method: create_dataset_filter
@@ -34,3 +34,10 @@ steps:
   predict:
     output: {{PREDICT_OUTPUT_CONFIG}}
     # model_uri: "models/model.pkl"
+
+# Defines custom performance metrics to compute during model training and evaluation
+custom_metrics:
+  - name: rounded_root_mean_squared_error
+    # Specifies the name of the function in `steps/custom_metrics.py` to use to compute the metric
+    function: rounded_root_mean_squared_error
+    greater_is_better: False

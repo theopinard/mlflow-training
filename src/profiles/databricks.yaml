@@ -11,9 +11,6 @@ model_registry:
   uri: databricks://theopinard@hotmail.fr
   model_name: "red_wine_scorer"
 
-# Override the default train / validation / test dataset split ratios
-SPLIT_RATIOS: [0.80, 0.10, 0.10]
-
 INGEST_CONFIG:
   # For different options please read: https://github.com/mlflow/recipes-classification-template#ingest-step
   using: "custom"
