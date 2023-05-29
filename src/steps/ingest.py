@@ -1,5 +1,5 @@
-from pandas import DataFrame
 import pandas as pd
+from pandas import DataFrame
 
 
 def load_file_as_dataframe(file_path: str, file_format: str) -> DataFrame:

@@ -1,7 +1,8 @@
 import os
-from mlflow.recipes import Recipe
-from pathlib import Path
 import sys
+from pathlib import Path
+
+from mlflow.recipes import Recipe
 
 os.chdir(Path(__file__).parents[1])
 

@@ -1,5 +1,7 @@
 import pandas as pd
+
 from src.steps.custom_metrics import rounded_root_mean_squared_error
+
 
 def test_rounded_root_mean_squared_error():
     """It returns the rounded root mean squared error"""
