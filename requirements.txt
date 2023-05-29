@@ -3,6 +3,7 @@ pandas==1.5.3
 scikit-learn==1.2.0
 shap==0.41.0
 matplotlib==3.7.0
+numpy==1.21.5
 flaml==1.2.4
 # only needed for mlflow recipe predict step to work
 pyspark==3.4.0

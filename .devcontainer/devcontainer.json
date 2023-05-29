@@ -12,6 +12,10 @@
         "8888": {
             "label": "jupyter",
             "onAutoForward": "notify"
+        },
+        "4040": {
+            "label": "spark",
+            "onAutoForward": "notify"
         }
     },
     "customizations": {
@@ -37,6 +41,7 @@
 
     "forwardPorts": [
         5000,
-        8888
+        8888,
+        4040,
     ]
 }
