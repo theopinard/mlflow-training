@@ -10,11 +10,11 @@ steps:
     using: custom
     transformer_method: transformer_fn
   train:
-    # using: custom
-    # estimator_method: estimator_fn
-    # ToDo9: use the AutoML estimator
-    using: "automl/flaml"
-    time_budget_secs: 60
+    using: custom
+    estimator_method: estimator_fn
+    # # ToDo9: use the AutoML estimator
+    # using: "automl/flaml"
+    # time_budget_secs: 60
   evaluate:
     validation_criteria:
       - metric: root_mean_squared_error
