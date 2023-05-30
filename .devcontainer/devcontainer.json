@@ -6,7 +6,23 @@
     "remoteUser": "nonroot",
     "portsAttributes": {
         "5000": {
-            "label": "mlflow",
+            "label": "mlflow server",
+            "onAutoForward": "notify"
+        },
+        "5001": {
+            "label": "mlflow serving endpoint",
+            "onAutoForward": "notify"
+        },
+        "5002": {
+            "label": "mlflow serving endpoint V2",
+            "onAutoForward": "notify"
+        },
+        "5011": {
+            "label": "mlflow serving endpoint recipe",
+            "onAutoForward": "notify"
+        },
+        "5012": {
+            "label": "mlflow serving endpoint recipe V2",
             "onAutoForward": "notify"
         },
         "8888": {
@@ -22,6 +38,7 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
+                "ms-toolsai.jupyter",
                 "ms-azuretools.vscode-docker",
                 "github.copilot"
             ],
@@ -41,7 +58,11 @@
 
     "forwardPorts": [
         5000,
+        5001,
+        5002,
+        5011,
+        5012,
         8888,
-        4040,
+        4040
     ]
 }

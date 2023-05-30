@@ -1,41 +1,31 @@
 recipe: "regression/v1"
-# Specifies the name of the column containing targets / labels for model training and evaluation
 target_col: "quality"
-# Sets the primary metric to use to evaluate model performance. This primary metric is used
-# to sort MLflow Runs corresponding to the recipe in the MLflow Tracking UI
 primary_metric: "root_mean_squared_error"
 steps:
   ingest: {{INGEST_CONFIG}}
   split:
-    # Train/validation/test split ratios
+    # ToDo2: specify split ratios for train, validation, and test sets
     split_ratios: [0.8, 0.1, 0.1]
-    # Specifies the method to use to perform additional cleaning on split datasets
-    # Note that arbitrary transformations should go into the transform step
-    # post_split_filter_method: create_dataset_filter
   transform:
     using: custom
-    # Specifies the method that defines the data transformations to apply during model inference
     transformer_method: transformer_fn
   train:
-    using: custom
-    # Specifies the method that defines the estimator type and parameters to use for model training
-    estimator_method: estimator_fn
+    # using: custom
+    # estimator_method: estimator_fn
+    # ToDo9: use the AutoML estimator
+    using: "automl/flaml"
+    time_budget_secs: 60
   evaluate:
-    # Sets performance thresholds that a trained model must meet in order to be eligible for
-    # registration to the MLflow Model Registry
     validation_criteria:
       - metric: root_mean_squared_error
         threshold: 1
   register:
-    # Indicates whether or not a model that fails to meet performance thresholds should still
-    # be registered to the MLflow Model Registry
     allow_non_validated_model: false
   ingest_scoring: {{INGEST_SCORING_CONFIG}}
   predict:
     output: {{PREDICT_OUTPUT_CONFIG}}
-    # model_uri: "models/model.pkl"
 
-# Defines custom performance metrics to compute during model training and evaluation
+# ToDo5: add custom metrics to our recipe
 custom_metrics:
   - name: rounded_root_mean_squared_error
     # Specifies the name of the function in `steps/custom_metrics.py` to use to compute the metric

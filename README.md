@@ -11,6 +11,7 @@ Please come to the tutorial already with a running repository. Setting up the en
 
 ## Installation
 
+### Use VS code with dev container: 
 [
     ![Open in Remote - Containers](
         https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
@@ -20,6 +21,8 @@ Please come to the tutorial already with a running repository. Setting up the en
 )
 
 If you use the dev container you are already done ;) 
+
+### Use VS code with a manual environemnt
 
 If you want to do it manually you will need to create a new environemnent with python 3.10 installed (you will need to change some path on the top of the notebook).
 
@@ -39,7 +42,7 @@ To make sure everything is running you can run the pipeline end to end.
 python src/scripts/run_all.py local
 ```
 
-## Who to use this repository
+## How to use this repository
 
 We will have 2 git branch you can switch between:
 * `main` branch which will contain the code with the solution

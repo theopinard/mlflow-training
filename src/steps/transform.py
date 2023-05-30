@@ -7,6 +7,7 @@ def transformer_fn():
     """
     Returns a Pipeline object that transforms the features
     """
+    # ToDo3: Create a Pipeline object that transforms the features
     columns = [
         "fixed acidity",
         "volatile acidity",
@@ -21,7 +22,7 @@ def transformer_fn():
         "alcohol",
         "is_red",
     ]
-    return Pipeline(
+    pipeline = Pipeline(
         [
             (
                 "ct",
@@ -37,3 +38,4 @@ def transformer_fn():
             )
         ]
     )
+    return pipeline
