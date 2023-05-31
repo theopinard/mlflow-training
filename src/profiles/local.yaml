@@ -4,13 +4,9 @@ experiment:
   artifact_location: "./metadata/mlflow/mlartifacts"
 
 model_registry:
-  # registry_uri: "sqlite:////tmp/registry.db"
-  # FIXME::REQUIRED: Specifies the name of the Registered Model to use when registering a trained
-  #                 model to the MLflow Model Registry.
   model_name: "red_wine_scorer"
 
 INGEST_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#ingest-step
   using: "custom"
   location:
     - "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
@@ -18,7 +14,6 @@ INGEST_CONFIG:
   loader_method: load_file_as_dataframe
 
 INGEST_SCORING_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#batch-scoring
   using: "custom"
   location:
     - "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
@@ -26,6 +21,5 @@ INGEST_SCORING_CONFIG:
   loader_method: load_file_as_dataframe
 
 PREDICT_OUTPUT_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#predict-step
   using: parquet
   location: "./metadata/prediction.parquet"

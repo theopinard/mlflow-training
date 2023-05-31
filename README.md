@@ -11,18 +11,24 @@ Please come to the tutorial already with a running repository. Setting up the en
 
 ## Installation
 
-### Use VS code with dev container: 
+### Use vscode with dev container: 
 [
     ![Open in Remote - Containers](
         https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
     )
 ](
-    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/theopinard/mlflow-training
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/theopinard/mlflow-training/
 )
 
-If you use the dev container you are already done ;) 
+If you already have VS Code and Docker installed, you can click the badge above. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
-### Use VS code with a manual environemnt
+### Use vscode on github (codespace)
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/theopinard/mlflow-training?quickstart=1)
+
+If you are using windows or do not want to install vscode on your machine, you can click on the badge above to spin up a codespace environment. 
+
+### Use your IDE with a manual environemnt
 
 If you want to do it manually you will need to create a new environemnent with python 3.10 installed (you will need to change some path on the top of the notebook).
 
@@ -32,11 +38,9 @@ Then you can install the requirements using pip
 pip install -r requirements.txt -r requirements-dev.txt
 ```
 
-You would also need to have java and pyenv installed to run the predict step
+You would also need to have java and pyenv installed to run the predict step in the second notebook.
 
-## Test your environement
-
-To make sure everything is running you can run the pipeline end to end.
+To make sure your environement was set up correctly you can finally run the pipeline end to end.
 
 ```bash
 python src/scripts/run_all.py local
@@ -44,19 +48,27 @@ python src/scripts/run_all.py local
 
 ## How to use this repository
 
-We will have 2 git branch you can switch between:
+We will have 2 git branchs you can switch between:
 * `main` branch which will contain the code with the solution
-* `solution` branch which contains the code with the ToDo to implements
+* `tutorial` branch which contains the code with the ToDo to implement.
+
+If you got the code from clicking on the vscode or codespace link you are already in the `tutorial` branch. 
 
 You can switch between from main to solution by running:
 ```bash
-git checkout solution
+git checkout tutorial
 ```
 
 If you are stuck you can check the solution by going to the main branch. 
 
 The tutorial consists of 2 jupyter notebooks which can be found in `src/notebook`. 
-You can start the jupyter server by running:
-```bash
-jupyter lab
-```
+
+You can start the jupyter server by running `jupyter lab` or use your IDE directly (pycharm pro, vscode and codespace supports jupyter notebooks).
+
+The presentation for the workshop can be found [here](https://docs.google.com/presentation/d/1EbprRo1zkZazqYy5o7cddSlozUBO2mpnKqF8x0c0EXA/edit?usp=sharing).
+
+## Credits
+
+This repository was only possible thanks to others repository that as used. In particular I would like to call out:
+* [python-devcontainer-template](https://github.com/godatadriven/python-devcontainer-template)
+* [recipes-examples](https://github.com/mlflow/recipes-examples)

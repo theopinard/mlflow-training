@@ -2,32 +2,21 @@ experiment:
   name: "/Shared/wine_score_recipe"
   tracking_uri: "databricks"
 
-  
-
 model_registry:
-  # registry_uri: "sqlite:////tmp/registry.db"
-  # FIXME::REQUIRED: Specifies the name of the Registered Model to use when registering a trained
-  #                 model to the MLflow Model Registry.
   uri: databricks://theopinard@hotmail.fr
   model_name: "red_wine_scorer"
 
 INGEST_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#ingest-step
   using: "custom"
   location:
     - "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
     - "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
   loader_method: load_file_as_dataframe
-  # using: custom
-  # location: ""
-  # loader_method: load_dataframe
 
 INGEST_SCORING_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#batch-scoring
   using: parquet
   location: "./data/winequality.csv"
 
 PREDICT_OUTPUT_CONFIG:
-  # For different options please read: https://github.com/mlflow/recipes-classification-template#predict-step
   using: parquet
   location: "./data/is_red_wine_prediction.parquet"
