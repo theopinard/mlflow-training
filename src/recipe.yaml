@@ -5,17 +5,15 @@ steps:
   ingest: {{INGEST_CONFIG}}
   split:
     # ToDo2: specify split ratios for train, validation, and test sets
-    split_ratios: [0.8, 0.1, 0.1]
+    # ...
   transform:
     using: custom
     transformer_method: transformer_fn
   train:
-    # using: custom
-    # estimator_method: estimator_fn
-    # # ToDo9: use the AutoML estimator
-    # commment line 13 and 15 and uncomment line 17 and 18
-    using: "automl/flaml"
-    time_budget_secs: 60
+    using: custom
+    estimator_method: estimator_fn
+    # ToDo9: use the AutoML estimator
+    # ...
   evaluate:
     validation_criteria:
       - metric: root_mean_squared_error
@@ -27,7 +25,4 @@ steps:
     output: {{PREDICT_OUTPUT_CONFIG}}
 
 # ToDo5: add custom metrics to our recipe
-custom_metrics:
-  - name: rounded_root_mean_squared_error
-    function: rounded_root_mean_squared_error
-    greater_is_better: False
+# ...
