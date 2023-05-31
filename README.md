@@ -17,7 +17,7 @@ Please come to the tutorial already with a running repository. Setting up the en
         https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
     )
 ](
-    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=hhttps://github.com/theopinard/mlflow-training/tree/tutorial
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=hhttps://github.com/theopinard/mlflow-training/
 )
 
 If you already have VS Code and Docker installed, you can click the badge above. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
@@ -52,9 +52,7 @@ We will have 2 git branchs you can switch between:
 * `main` branch which will contain the code with the solution
 * `tutorial` branch which contains the code with the ToDo to implement.
 
-If you got the code from clicking on the vscode or codespace link you are already in the `tutorial` branch. 
-
-You can switch between from main to solution by running:
+If you got the code from clicking on the codespace link you are already in the `tutorial` branch. Otherwise you can switch between from main to solution by running:
 ```bash
 git checkout tutorial
 ```
