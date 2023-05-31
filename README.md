@@ -17,14 +17,14 @@ Please come to the tutorial already with a running repository. Setting up the en
         https://img.shields.io/static/v1?label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
     )
 ](
-    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/theopinard/mlflow-training/
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=hhttps://github.com/theopinard/mlflow-training/tree/tutorial
 )
 
 If you already have VS Code and Docker installed, you can click the badge above. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
 ### Use vscode on github (codespace)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/theopinard/mlflow-training?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/theopinard/mlflow-training/tree/tutorial?quickstart=1)
 
 If you are using windows or do not want to install vscode on your machine, you can click on the badge above to spin up a codespace environment. 
 
